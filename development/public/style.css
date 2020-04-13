@@ -1,0 +1,355 @@
+/*
+CSS 
+CASCADING STYLESHEET
+
+TUDO É BOX{ 
+  largura
+  altura
+  conteudo da caixa
+
+  espacamento 
+  preenchimento 
+  bordas 
+  posicionamentos
+}
+
+*/
+/* LADO ESQUERDO*/
+body{ 
+  background: rgb(185, 173, 173); /* Cor do Fundo*/
+  color: #25282B;    /* Cor do texto*/
+  font-family: 'Montserrat', sans-serif;
+  /*text-align: center; */ /* Alinhamento do texto no centro*/
+  margin: 0;
+}
+
+body.hideScroll{ 
+  overflow: hidden; /* tirar a barra de rolagem  */
+}
+
+
+p.hide{ 
+  display: none;  /* apresentacao na tela */
+}
+
+a{ 
+  color: #ff5E84;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover{ 
+  text-decoration: underline;
+}
+
+p, .description{ 
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  
+
+}
+
+#container{ 
+  width: 80%; /* pega somente 90% da página*/
+  max-width: 980px; /* Largura maxima da caixa container*/
+
+  margin: 40px auto; /* em cima em baixo 40px e nas laterais automatico*/
+
+  display: flex; /* coloca todas suas caixas em linha ou seja seus filhos  */
+}
+
+#intro{ 
+  width: 300px;
+  margin-right: 64px;
+}
+main{ 
+  margin: 32px 0 0 0;
+
+}
+
+#buttons{ 
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 32px;
+}
+
+button{ 
+  border: none;         /* Retirando a borda do botao */
+  font-weight: bold;    /* cor do negrito */
+  background: none; 
+  color: #ff5E84; 
+  cursor: pointer;  /* cursor quando em cima do botao aparece a maozinha do mouse */
+  outline: none;  /* quando apertar no button nao aparece a borda*/
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+}
+/* quando estiver com o mouse em cima do botao - hover*/
+button:hover{ 
+  text-decoration: underline;
+}
+
+a.button:hover{ 
+  background-color: #0984e3;
+  text-decoration: none;
+}
+
+/* Acessando a classe com ponto */
+a.button{ 
+  color: white;
+  background: #ff5E84; 
+
+  width: 150px;
+  height: 40px; 
+
+  font-size: 14px;
+  font-weight: bold;
+
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px #ff5e8432; /* sombra na caixa deslocamento em x - y - cores*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer{ 
+  text-align: center;
+  font-size: 14px; 
+  font-weight: 400;
+  line-height:18px; 
+  letter-spacing: 0.2px;
+  color: #777; 
+}
+
+footer a{ 
+  opacity: 0.7; 
+}
+
+/* LADO DA DIREITA */
+.idea{
+  display: flex; /* coloca todas suas caixas em linha ou seja seus filhos  */
+  margin-bottom: 32px;
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px -8px  rgba(1, 1, 1, 0.1);
+ }
+
+ .idea img{ 
+   width: 60px; 
+   height:60px;  
+   margin-right: 32px;
+ }
+
+ .idea h3{ 
+   margin: 0; 
+ }
+
+ .idea p{ 
+  margin: 8px 0;
+  color: #777; 
+
+ }
+
+ .idea .description{ 
+   margin: 16px 0; 
+ }
+
+#modal{ 
+   background-color:#ff5e84;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   /*width: 100vw;*/ /* aumenta a pagina em largura 100 por cento*/
+   /*height: 100vh;*/ /* aumenta a pagina em altura 100 por cento*/
+   display: flex;
+  /*align-items: center;*/ /* alinha todos elementos no centro em relacao a y*/
+   justify-content: center; /*alinha todos elementos no centro em relacao a x*/
+   transition: 400ms;
+ }
+
+ #modal.addScroll{ 
+   overflow: auto;
+ }
+
+ #modal .content{ 
+   margin-top: 5%;
+
+   color: white;
+
+ }
+
+ #modal .content h1{ 
+   text-align: center;
+   text-transform: uppercase; /* coloca o h1 - cabeçalho tudo em maisculo*/
+
+ }
+
+ #modal form{ 
+   width: 80%;
+   max-width: 800px;
+   margin: 0 auto 15%;
+   margin-top: 32px;
+   display: grid; /* utiliza de linhas e colunas para mostrar o visual do formulario*/
+   grid-template-columns: 1fr 1fr; /*fraciona do mesmo tamanho em duas colunas*/
+   gap:20px;  /*separacao das caixas entre linhas e colunas*/
+ }
+
+ .content form div:nth-child(3),
+ .content form div:nth-child(4),
+ .content form div:nth-child(5){ 
+    grid-column: span 2; /* pega a div 3 4 5 e inicie e finalize com o tamanho do seu input ate a borda*/
+ }
+
+
+ form input, form textarea{ 
+   width:100%;
+   padding: 12px;
+   box-sizing: border-box; /* preenche os input e formulario até a borda da caixa*/
+   border-radius: 6px;
+   border: 1px solid rega(141, 25, 52, 0.5);
+   outline: none; /* retira a borda de quando se aperta em cima*/  
+   font-size: 16px;
+ }
+
+ form label{ 
+   font-weight: 600;
+   line-height: 32px; 
+   letter-spacing: 0.8px;
+ }
+
+ form a{ 
+
+  width: 150px;
+  height: 40px;
+
+   background-color: #ffffff22;
+   color: white;
+
+   /* com conteudo do display*/
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   font-size: 14px;
+   border-radius: 6px;
+   align-self: end; /* ao fim da coluna coloca o botao*/
+
+   transition: 400ms; /*tempo que leva para mudar a cor de quando se aperta no botao */
+ }
+
+ form a:hover{ 
+   background: #fff;
+   color: #ff5e84; 
+
+   text-decoration: none; /* tem haver com o underline*/
+
+  
+ }
+
+ form button{ 
+   background: white;
+   width: 150px;
+   height: 40px;
+
+   border-radius: 6px;
+   cursor: pointer;
+   grid-column: 2; /* jogando o botao para a coluna dois*/
+   justify-self: end; /* joga o botao para o fim da coluna*/
+   transition: 400ms;
+ }
+
+ form button:hover{ 
+   background-color: #0984e3;
+   color: white;
+
+   text-decoration: none; /* retira se o underline do botao*/
+ }
+
+ #modal.hide{ 
+  /*display: none;*/  /* apresentacao na tela */
+  opacity: 0;
+  visibility: hidden;
+} 
+
+/* ideias.html */
+
+#page-ideas #container{ 
+  display: block;
+}
+
+#page-ideas header{ 
+  display: flex; /*mostra seus filhos um do lado do outro*/
+  justify-content: space-between;
+  
+}
+
+#page-ideas nav{ 
+  display: flex; 
+  align-items: center;
+
+}
+
+#page-ideas nav li { 
+  list-style-type: none; /*retira os pontinhos da lista*/
+  margin-right: 16px;
+}
+
+#page-ideas nav li a{ 
+  color: #25282B;
+}
+
+#page-ideas nav li a.button{ 
+  color: white;
+}
+
+#page-ideas nav li:last-child {
+  margin: 0;
+
+} 
+
+#page-ideas nav li:last-child a:hover { 
+  background-color: #0984e3;
+  text-decoration: none;
+
+} 
+
+section#title  { 
+
+  text-align: center;
+
+}
+
+section#title p{ 
+  opacity: 0.7;
+  margin: 0;
+}
+
+section#title h1{ 
+  margin: 0;
+  font-size: 28px;
+}
+
+section#ideas{ 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px; /* espacamento*/
+}
+
+section#ideas .idea{
+  margin: 0;
+}
+
+section#title,
+section#ideas,
+footer{ 
+  margin-top: 64px;
+}
+
